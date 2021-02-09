@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Docker Website</title>
+		<link rel="stylesheet" href="../../DockerWebsite/home.css">
+	</head>
+
+	<body>
+
+		<header>
+			<div class="webhead">
+				<h1><a href="../../DockerWebsite/index.html"> Docker Website</a></h1>
+			</div>
+		</header>
+
+		<main>
+			<div class="card">
+				<div id="sidenav" class="card">
+					<a href="../../DockerWebsite/index.html">Home</a>
+					<a href="../../DockerWebsite/virt/virt.html">Virtualization</a>
+					<a href="../../DockerWebsite/cont/cont.html">Containerization</a>
+					<a href="../../DockerWebsite/compare/compare.html">Virtual vs. Container</a>
+					<a href="../../DockerWebsite/webserver/webserver.html">Docker Web Server Setup</a>
+					<a class="current" href="../../DockerWebsite/linuxcom/linuxcom.html">Linux Help</a>
+					
+				</div>
+				<h2>How to Login to a Docker Container</h2>
+				<p>Here we will show you how to log into Linux using docker. If you need instructs on adding Ubuntu and Vim, please look at the link on the left involving web servers.</p>
+				<h2 style="font-size:18px">Signing into a Linux Container</h2>
+				<p>For this example we are using Ubuntu, to sign into the container, use the following command</p>
+				<p style="font-family:courier"><p style="font-family:courier">docker run -it ubuntu:latest /bin/bash<p>
+				<p> This puts you into an ubuntu instance, given you already pulled the Ubuntu image.</p>
+				<h2 style="font-size:18px">Some Basic Linux Commands</h2>
+				<p>Here are some basic Linux commands, of course more can be found online like <a href="https://www.guru99.com/linux-commands-cheat-sheet.html" target="_blank">here</a></p>
+				<p style="font-family:courier"><p style="font-family:courier"[ls]: Lists all files and directories in the present working directory<br>[cd]: To change to a particular directory<br>[cat]: Given a filename, displays the contents<br>[mv]: Given a source file and destination, it will move and rename the file if given a new name<br>[rm]: Given a filename, it will remove it<br>[mkdir]: Given a name, will make a directory<br>[vi]: Will create or edit the filename given and transfer it to Vim<br>[exit]: This command lets one leave the Linux instance</p>
+				
+			</div>
+		</main>
+	</body>

@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Docker Website</title>
+		<link rel="stylesheet" href="../../DockerWebsite/home.css">
+	</head>
+
+	<body>
+
+		<header>
+			<div class="webhead">
+				<h1><a href="../../DockerWebsite/index.html"> Docker Website</a></h1>
+			</div>
+		</header>
+
+		<main>
+			<div class="card">
+				<div id="sidenav" class="card">
+					<a href="../../DockerWebsite/index.html">Home</a>
+					<a href="../../DockerWebsite/virt/virt.html">Virtualization</a>
+					<a href="../../DockerWebsite/cont/cont.html">Containerization</a>
+					<a href="../../DockerWebsite/compare/compare.html">Virtual vs. Container</a>
+					<a class="current" href="../../DockerWebsite/webserver/webserver.html">Docker Web Server Setup</a>
+					<a href="../../DockerWebsite/linuxcom/linuxcom.html">Linux Help</a>
+					
+				</div>
+				<h2>How to Set Up a Web Server with Docker</h2>
+				<p>This page will function as a basic tutorial for setting up a web server using Docker. The main source for this guide and for more information, click this <a href="https://www.tutorialspoint.com/docker/building_web_server_docker_file.htm" target="_blank">link</a>.</p>
+				<h2 style="font-size:18px">STEP 1: Setting Up Ubuntu</h2>
+				<p>First you need to download Ubuntu on to Docker, just run the following code:</p>
+				<p style="font-family:courier">>docker pull ubuntu<p>
+				<h2 style="font-size:18px">STEP 2: Setting Up Vim</h2>
+				<p>Now you should need vim, try with to start an image of ubuntu using the following command</p>
+				<p style="font-family:courier">>docker run -it ubuntu:latest /bin/bash<p>
+				<p> After this you will now be using ubuntu, now download Vim with this command</p>
+				<p style="font-family:courier">>apt-get install vim<p>
+				<h2 style="font-size:18px">STEP 3: Setting Up Apache</h2>
+				<p> Now you need to install Apache which is what the webserver will use, enter the following command</p>
+				<p style="font-family:courier">>apt-get install apache2<p>
+				<p>After installing Apache2, take note of the snapshot number, it is next to the root, it should look similar to this</p>
+				<img src="../../DockerWebsite/Images/root.jpg" alt="root">
+				<p> Exit by typing <q>exit</q><p>
+				<h2 style="font-size:18px">STEP 4: Setting Up Docker Image</h2>
+				<p> Now to create a docker image, use the following command</p>
+				<p style="font-family:courier">>docker commit 3b0246bc08f ubuntu-my_apache2<p>
+				<p> The string of random values is just an example and your value will be unique.<p>
+				<h2 style="font-size:18px">STEP 5: Run Image</h2>
+				<p>Using this command the server will now exist<p>
+				<p style="font-family:courier">>docker run -it -p 127.0.0.1:80:80 -v H:\host\local_dir:/index.html ubuntu-my_apache2 /bin/bash<p>
+				<p> Now the web server should be up</p>
+
+			</div>
+		</main>
+	</body>

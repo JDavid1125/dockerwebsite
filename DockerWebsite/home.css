@@ -1,0 +1,105 @@
+/* DEVELOPER Juan Ceballos, IS218, Fall 2021 */
+
+@charset "ISO-8859-1";
+
+body {
+  width: 90%;
+  
+  margin-top:25px;
+  margin-bottom: 0px;
+  margin-left: 5%;
+  margin-right: auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  color: #212529;
+  background-color: #add8e6;
+}
+
+header{
+	z-index: 1; 
+}
+
+header a{
+	text-decoration: none;
+	color: white;
+}
+
+.webhead{
+	height:77px;	
+}
+
+.webhead h1{
+	padding-left: 1.28%;
+	font-family: Helvetica;
+	font-weight: normal;
+    	margin-top: 0px;
+    	padding-top: 25px;
+    	padding-bottom: 12px;
+    	text-align: center;
+	font-size: 42px;
+}
+
+main{
+	background-repeat: repeat-y;
+	padding-top: 5px;
+	padding-bottom: 30px;
+	background-size: 100% auto;
+	
+}
+
+#sidenav {
+	width: 130px;
+	position: fixed;
+	z-index: 1;
+	top: 130px;
+	left: 8%;
+	background: #eee;
+	overflow-x: hidden;
+	border-radius: 0px;
+	padding: 8px 0;
+	min-height:120px;
+}
+
+#sidenav a {
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 12px;
+	color: #2196F3;
+	display: block;
+}
+
+#sidenav a:hover {
+	color: #064579;
+}
+
+#sidenav a.current{
+	color: black;
+}
+
+#sidenav a.current:hover{
+	color: white;
+}
+
+.card{
+	
+	
+	min-width: 140px;
+	min-height: 280px;
+	border-radius: 25px;
+	border: 2px white;
+	padding-top: 12px;
+	padding-left: clamp(180px,20%,200px);
+	padding-bottom: 8px;
+	background: white;
+}
+
+.card h2{
+	font-family: Helvetica;
+}
+
+.card p{
+	padding-left: 8px;
+	padding-right: 8px;
+	color: #343a40;
+}
